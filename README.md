@@ -27,7 +27,7 @@ Further access control information is [available here](https://cloud.google.com/
 After a successful Habitat package build, images can be pushed to the Container Registry using the registry URI.  The format of this 
 follows: `[HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]`, more details at [this link](https://cloud.google.com/container-registry/docs/pushing-and-pulling):
 
-```bash
+```
 $ hab pkg export kubernetes ./results/habskp-hab-gcr-demo-0.1.0-20180710145742-x86_64-linux.hart
 $ docker tag habskp/hab-gcr-demo:latest eu.gcr.io/spaterson-project/hab-gcr-demo:latests
 $ docker push eu.gcr.io/spaterson-project/hab-gcr-demo:latest
@@ -191,7 +191,7 @@ habitat "hab-gcr-demo" created
 service "hab-gcr-demo-lb" created
 $ kubectl get services hab-gcr-demo-lb
 NAME              TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)        AGE
-hab-gcr-demo-lb   LoadBalancer   10.451.200.92   35.233.155.217   80:31696/TCP   1m
+hab-gcr-demo-lb   LoadBalancer   10.451.200.92   35.230.158.217   80:31696/TCP   1m
 ```
 
 Navigating to the page we see the expected `index.html`:
