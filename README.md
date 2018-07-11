@@ -29,7 +29,7 @@ follows: `[HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]`, more details at [this link](ht
 
 ```
 $ hab pkg export kubernetes ./results/habskp-hab-gcr-demo-0.1.0-20180710145742-x86_64-linux.hart
-$ docker tag habskp/hab-gcr-demo:latest eu.gcr.io/spaterson-project/hab-gcr-demo:latests
+$ docker tag habskp/hab-gcr-demo:latest eu.gcr.io/spaterson-project/hab-gcr-demo:latest
 $ docker push eu.gcr.io/spaterson-project/hab-gcr-demo:latest
 ```
 
