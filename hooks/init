@@ -1,0 +1,8 @@
+#!/bin/sh 
+chmod +x {{pkg.svc_data_path}}
+cp {{pkg.svc_config_path}}/{{cfg.http.server.index}} {{pkg.svc_data_path}}/
+ls -al {{pkg.svc_data_path}}/
+chown -RL hab:hab {{pkg.svc_data_path}}
+#nginx
+mkdir -p {{pkg.svc_var_path}}/nginx
+chown hab:hab {{pkg.svc_var_path}}

@@ -1,0 +1,8 @@
+worker_processes = 1
+
+[events]
+worker_connections = 512
+
+[http.server]
+port = 8080
+index = "index.html"

@@ -1,0 +1,26 @@
+apiVersion: habitat.sh/v1beta1
+kind: Habitat
+metadata:
+  name: hab-gcr-demo
+customVersion: v1beta2
+spec:
+  v1beta2:
+    image: eu.gcr.io/spaterson-project/hab-gcr-demo:latest
+    count: 1
+    service:
+      name: hab-gcr-demo
+      topology: standalone
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hab-gcr-demo-lb
+spec:
+  type: LoadBalancer
+  ports:
+  - name: web
+    port: 80
+    targetPort: 8080
+  selector:
+    habitat-name: hab-gcr-demo
+

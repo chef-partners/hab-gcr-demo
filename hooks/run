@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Start the Nginx server, passing it our bundled config
+exec {{ pkgPathFor "core/nginx" }}/bin/nginx -c "{{ pkg.svc_config_path }}/nginx.conf" 2>&1
